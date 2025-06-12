@@ -104,11 +104,11 @@
 
 
   <form id="pesquisaForm" action="https://api.sheetmonkey.io/form/r93mefYgcvUqXuR81NJqN" method="POST">
+  <p>Suas respostas ajudarão a compreender como a IA tem sido utilizada...</p>
 
-     <p >
-Suas respostas ajudarão a compreender como a IA tem sido utilizada no dia a dia, quais mudanças têm ocorrido e quais percepções profissionais estão surgindo diante desse avanço tecnológico. Agradecemos sua colaboração!
- </p>
-    <!-- Seção 1: Dados Demográficos -->
+  <!-- Página 1 -->
+  <div class="pagina" style="display:block">
+    <h2>1. Dados Demográficos</h2>
     <label>Faixa etária:</label>
     <select required name="faixa_etaria">
       <option value="">Selecione...</option>
@@ -118,10 +118,8 @@ Suas respostas ajudarão a compreender como a IA tem sido utilizada no dia a dia
       <option value="40-49">40-49</option>
       <option value="50+">50+</option>
     </select>
-
     <label>Formação acadêmica:</label>
     <input type="text" name="formacao" required>
-
     <label>Área de atuação:</label>
     <select name="atuacao" required>
       <option value="">Selecione...</option>
@@ -129,7 +127,6 @@ Suas respostas ajudarão a compreender como a IA tem sido utilizada no dia a dia
       <option value="Professor">Professor(a)</option>
       <option value="Ambos">Ambos</option>
     </select>
-
     <label>Tempo de experiência:</label>
     <select name="experiencia" required>
       <option value="">Selecione...</option>
@@ -138,22 +135,23 @@ Suas respostas ajudarão a compreender como a IA tem sido utilizada no dia a dia
       <option>4 a 10 anos</option>
       <option>Mais de 10 anos</option>
     </select>
+  </div>
 
-    <!-- Seção 2: Uso de IA -->
+  <!-- Página 2 -->
+  <div class="pagina" style="display:none">
+    <h2>2. Uso de IA</h2>
     <label>Você já utilizou alguma ferramenta de IA?</label>
     <select name="usa_ia" required>
       <option value="">Selecione...</option>
       <option>Sim</option>
       <option>Não</option>
     </select>
-
-    <label>Quais ferramentas de IA você já utilizou?</label>
+    <label>Quais ferramentas?</label>
     <input type="checkbox" name="ferramentas[]" value="ChatGPT">ChatGPT<br>
-    <input type="checkbox" name="ferramentas[]" value="Copilot">GitHub Copilot<br>
+    <input type="checkbox" name="ferramentas[]" value="Copilot">Copilot<br>
     <input type="checkbox" name="ferramentas[]" value="CodeWhisperer">CodeWhisperer<br>
-    <input type="checkbox" name="ferramentas[]" value="Gemini">Google Gemini / Bard<br>
+    <input type="checkbox" name="ferramentas[]" value="Gemini">Gemini<br>
     <input type="checkbox" name="ferramentas[]" value="Outra">Outra<br>
-
     <label>Frequência de uso:</label>
     <select name="frequencia" required>
       <option value="">Selecione...</option>
@@ -162,10 +160,8 @@ Suas respostas ajudarão a compreender como a IA tem sido utilizada no dia a dia
       <option>Raramente</option>
       <option>Nunca</option>
     </select>
-
-    <label>Finalidades para as quais utiliza IA:</label>
-    <div id="finalidades-container">
-    <input type="checkbox" name="finalidades[]" value="Geração de código"> Geração de código<br>
+    <label>Finalidades:</label>
+    <input type="checkbox" name="finalidades[]" value="Geração de código">Geração de código<br>
     <input type="checkbox" name="finalidades[]" value="Revisão e correção de código"> Revisão e correção de código<br>
     <input type="checkbox" name="finalidades[]" value="Planejamento de aulas/atividades"> Planejamento de aulas/atividades<br>
     <input type="checkbox" name="finalidades[]" value="Criação de conteúdos (textos, exemplos, exercícios)"> Criação de conteúdos (textos, exemplos, exercícios)<br>
@@ -173,119 +169,117 @@ Suas respostas ajudarão a compreender como a IA tem sido utilizada no dia a dia
     <input type="checkbox" name="finalidades[]" value="Automatização de tarefas"> Automatização de tarefas<br>
     <input type="checkbox" id="outraFinalidade" name="finalidades[]" value="Outro"> Outro(s)<br>
     <textarea id="campoOutraFinalidade" name="finalidade_outro" rows="2" placeholder="Descreva outras finalidades..." style="display: none;"></textarea>
-    </div>
+  </div>
 
-
-    <!-- Seção 3: Percepção -->
-    <label>Em uma escala de 1 a 5, quanto a IA impactou positivamente sua produtividade?</label>
+  <!-- Página 3 -->
+  <div class="pagina" style="display:none">
+    <h2>3. Percepção</h2>
+    <label>Quanto a IA impactou sua produtividade? (1 a 5)</label>
     <input type="number" name="impacto" min="1" max="5" required>
-
-    <label>Você sente que a IA aumentou sua eficiência?</label>
+    <label>A IA aumentou sua eficiência?</label>
     <select name="eficiencia" required>
       <option value="">Selecione...</option>
       <option>Sim</option>
       <option>Não</option>
       <option>Parcialmente</option>
     </select>
-
-    <label>Principais benefícios percebidos:</label>
-    <div id="beneficios-container">
-    <input type="checkbox" name="beneficios[]" value="Ganho de tempo"> Ganho de tempo<br>
+    <label>Benefícios percebidos:</label>
+    <input type="checkbox" name="beneficios[]" value="Ganho de tempo">Ganho de tempo<br>
     <input type="checkbox" name="beneficios[]" value="Apoio na escrita de código"> Apoio na escrita de código<br>
     <input type="checkbox" name="beneficios[]" value="Geração de ideias"> Geração de ideias<br>
     <input type="checkbox" name="beneficios[]" value="Ajuda na explicação de conteúdos"> Ajuda na explicação de conteúdos<br>
     <input type="checkbox" name="beneficios[]" value="Automatização de tarefas repetitivas"> Automatização de tarefas repetitivas<br>
     <input type="checkbox" id="outroBeneficio[]" name="beneficios" value="Outro"> Outro(s)<br>
     <textarea id="campoOutroBeneficio" name="beneficio_outro[]" rows="2" placeholder="Descreva outros benefícios..." style="display: none;"></textarea>
-    </div>
+    
+  </div>
 
-
-    <label>Desafios ou impactos negativos:</label>
-    <textarea name="desafios" rows="3"></textarea>
-
-    <!-- Seção 4: Rotina -->
-    <label>Houve mudança na forma como você ensina ou desenvolve após usar IA?</label>
+  <!-- Página 4 -->
+  <div class="pagina" style="display:none">
+    <h2>4. Rotina</h2>
+    <label>Houve mudança na sua forma de trabalhar?</label>
     <select name="mudanca" required>
       <option value="">Selecione...</option>
       <option>Sim</option>
       <option>Não</option>
     </select>
-
     <label>Atividades substituídas ou otimizadas:</label>
     <textarea name="atividades" rows="3"></textarea>
-
-    <label>Você se sente confortável com o avanço das IAs ou tem receio de perder o emprego?</label>
-    <div>
-    <input type="radio" name="sentimento_ia[]" value="Confortável com o avanço"> Confortável com o avanço<br>
+    <label>Como você se sente com o avanço da IA?</label>
+    <input type="radio" name="sentimento_ia[]" value="Confortável com o avanço">Confortável<br>
     <input type="radio" name="sentimento_ia[]" value="Confortável, mas cauteloso(a)"> Confortável, mas cauteloso(a)<br>
     <input type="radio" name="sentimento_ia[]" value="Preocupado(a) com o futuro da profissão"> Preocupado(a) com o futuro da profissão<br>
     <input type="radio" name="sentimento_ia[]" value="Receio de perder o emprego"> Receio de perder o emprego<br>
     <input type="radio" name="sentimento_ia[]" value="Indiferente"> Indiferente<br>
-    </div>
+    
+  </div>
 
-
-    <!-- Seção 5: Expectativas -->
-    <label>A IA vai transformar sua profissão nos próximos 5 anos?</label>
+  <!-- Página 5 -->
+  <div class="pagina" style="display:none">
+    <h2>5. Expectativas</h2>
+    <label>A IA vai transformar sua profissão?</label>
     <select name="futuro" required>
       <option value="">Selecione...</option>
       <option>Sim</option>
       <option>Não</option>
       <option>Não sei</option>
     </select>
-
     <label>Você sente necessidade de aprender mais sobre IA?</label>
     <select name="aprender_ia" required>
       <option value="">Selecione...</option>
       <option>Sim</option>
       <option>Não</option>
     </select>
+    <label>Comentário final:</label>
+    <textarea name="comentario" rows="4" placeholder="Compartilhe sua opinião..."></textarea>
+    <br>
+    <button type="submit">Enviar</button>
+  </div>
 
-    <label>A IA deve ser inserida na formação de novos profissionais?</label>
-    <select name="ia_formacao" required>
-      <option value="">Selecione...</option>
-      <option>Sim</option>
-      <option>Não</option>
-      <option>Já é</option>
-    </select>
+  <!-- Botões de navegação -->
+  <div style="margin-top: 20px;">
+    <button type="button" onclick="voltar()" id="btnVoltar" style="display: none;">Voltar</button>
+    <button type="button" onclick="proxima()" id="btnProximo">Próximo</button>
+  </div>
+</form>
 
-    <!-- Comentário final -->
-    <label>Compartilhe sua opinião ou experiência com IA:</label>
-    <textarea name="comentario_final" rows="4"></textarea>
+<script>
+  let paginaAtual = 0;
+  const paginas = document.querySelectorAll(".pagina");
 
-    <button type="submit">Enviar Resposta</button>
-    <div id="mensagem" class="success" style="display:none;">Resposta enviada com sucesso!</div>
-  </form>
-
-  <script>
-    const form = document.getElementById("pesquisaForm");
-    const mensagem = document.getElementById("mensagem");
-
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-      mensagem.style.display = "block";
-      form.reset();
+  function mostrarPagina(index) {
+    paginas.forEach((pag, i) => {
+      pag.style.display = i === index ? "block" : "none";
     });
-    const outroBeneficio = document.getElementById("outroBeneficio");
-const campoOutroBeneficio = document.getElementById("campoOutroBeneficio");
+    document.getElementById("btnVoltar").style.display = index === 0 ? "none" : "inline-block";
+    document.getElementById("btnProximo").innerText = index === paginas.length - 1 ? "Finalizar" : "Próximo";
+  }
 
-outroBeneficio.addEventListener("change", function () {
-  campoOutroBeneficio.style.display = this.checked ? "block" : "none";
-});
-const outraFinalidade = document.getElementById("outraFinalidade");
-const campoOutraFinalidade = document.getElementById("campoOutraFinalidade");
+  function proxima() {
+    const inputs = paginas[paginaAtual].querySelectorAll("select[required], input[required], textarea[required]");
+    for (const input of inputs) {
+      if (!input.value) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return;
+      }
+    }
+    if (paginaAtual < paginas.length - 1) {
+      paginaAtual++;
+      mostrarPagina(paginaAtual);
+    } else {
+      document.getElementById("pesquisaForm").submit();
+    }
+  }
 
-outraFinalidade.addEventListener("change", function () {
-  campoOutraFinalidade.style.display = this.checked ? "block" : "none";
-});
+  function voltar() {
+    if (paginaAtual > 0) {
+      paginaAtual--;
+      mostrarPagina(paginaAtual);
+    }
+  }
 
-  document.getElementById("pesquisaForm").addEventListener("submit", function () {
-    setTimeout(() => {
-      alert("Obrigado por responder! Sua resposta foi enviada com sucesso.");
-    }, 500);
-  });
+  mostrarPagina(paginaAtual);
+</script>
 
-
-
-  </script>
 </body>
 </html>
