@@ -16,6 +16,10 @@
     h1 {
       text-align: center;
       color: #333;
+      font-size: 25px;
+    }
+    h2{
+      font-size: 20px;
     }
 
     form {
@@ -27,7 +31,7 @@
 
     label {
       font-weight: bold;
-      display: block;
+      display: flex;
       margin-top: 1rem;
       color: #333;
     }
@@ -42,7 +46,7 @@
     }
 
     input{
-      width: 815px;
+      width: 90%;
       padding: 0.5rem;
       margin-top: 0.5rem;
       margin-bottom: 1rem;
@@ -51,7 +55,7 @@
     }
 
     textarea {
-      width: 815px;
+      width: 90%;
       padding: 0.5rem;
       margin-top: 0.5rem;
       margin-bottom: 1rem;
@@ -89,7 +93,7 @@
     p{
         color: #000000;
         font-size: 20px;
-        max-width: 950;
+        max-width: auto;
         margin-bottom: 40px;
         padding: 40px;
         text-align: center;
@@ -104,7 +108,7 @@
 
 
   <form id="pesquisaForm" action="https://api.sheetmonkey.io/form/r93mefYgcvUqXuR81NJqN" method="POST">
-  <p>Suas respostas ajudarão a compreender como a IA tem sido utilizada...</p>
+
 
   <!-- Página 1 -->
   <div class="pagina" style="display:block">
@@ -118,8 +122,26 @@
       <option value="40-49">40-49</option>
       <option value="50+">50+</option>
     </select>
+    <!-- Substitua esta parte -->
     <label>Formação acadêmica:</label>
-    <input type="text" name="formacao" required>
+    <!-- Novo bloco de seleção -->
+    <select name="formacao" id="formacao" required>
+      <option value="">Selecione...</option>
+      <option value="Pedagogia">Pedagogia</option>
+      <option value="Letras">Letras</option>
+      <option value="Matemática">Matemática</option>
+      <option value="Física">Física</option>
+      <option value="Química">Química</option>
+      <option value="História">História</option>
+      <option value="Geografia">Geografia</option>
+      <option value="Educação Física">Educação Física</option>
+      <option value="Informática">Informática</option>
+      <option value="Outro">Outro</option>
+    </select>
+
+    <input type="text" name="formacao_outro" id="formacaoOutro" placeholder="Descreva sua formação..." style="display: none;" />
+
+
     <label>Área de atuação:</label>
     <select name="atuacao" required>
       <option value="">Selecione...</option>
@@ -141,11 +163,11 @@
   <div class="pagina" style="display:none">
     <h2>2. Uso de IA</h2>
     <label>Você já utilizou alguma ferramenta de IA?</label>
-    <select name="usa_ia" required>
-      <option value="">Selecione...</option>
-      <option>Sim</option>
-      <option>Não</option>
-    </select>
+    <div style="margin-top: 0.5rem; margin-bottom: 1rem;">
+      <input type="radio" name="usa_ia" value="Sim" required> Sim<br>
+      <input type="radio" name="usa_ia" value="Não"> Não
+    </div>
+
     <label>Quais ferramentas?</label>
     <input type="checkbox" name="ferramentas[]" value="ChatGPT">ChatGPT<br>
     <input type="checkbox" name="ferramentas[]" value="Copilot">Copilot<br>
@@ -177,12 +199,11 @@
     <label>Quanto a IA impactou sua produtividade? (1 a 5)</label>
     <input type="number" name="impacto" min="1" max="5" required>
     <label>A IA aumentou sua eficiência?</label>
-    <select name="eficiencia" required>
-      <option value="">Selecione...</option>
-      <option>Sim</option>
-      <option>Não</option>
-      <option>Parcialmente</option>
-    </select>
+    <div style="margin-top: 0.5rem; margin-bottom: 1rem;">
+      <input type="radio" name="usa_ia" value="Sim" required> Sim<br>
+      <input type="radio" name="usa_ia" value="Não"> Não<br>
+      <input type="radio" name="usa_ia" value="Não sei"> Parcialmente
+    </div>
     <label>Benefícios percebidos:</label>
     <input type="checkbox" name="beneficios[]" value="Ganho de tempo">Ganho de tempo<br>
     <input type="checkbox" name="beneficios[]" value="Apoio na escrita de código"> Apoio na escrita de código<br>
@@ -198,11 +219,10 @@
   <div class="pagina" style="display:none">
     <h2>4. Rotina</h2>
     <label>Houve mudança na sua forma de trabalhar?</label>
-    <select name="mudanca" required>
-      <option value="">Selecione...</option>
-      <option>Sim</option>
-      <option>Não</option>
-    </select>
+    <div style="margin-top: 0.5rem; margin-bottom: 1rem;">
+      <input type="radio" name="usa_ia" value="Sim" required> Sim<br>
+      <input type="radio" name="usa_ia" value="Não"> Não
+    </div>
     <label>Atividades substituídas ou otimizadas:</label>
     <textarea name="atividades" rows="3"></textarea>
     <label>Como você se sente com o avanço da IA?</label>
@@ -218,18 +238,16 @@
   <div class="pagina" style="display:none">
     <h2>5. Expectativas</h2>
     <label>A IA vai transformar sua profissão?</label>
-    <select name="futuro" required>
-      <option value="">Selecione...</option>
-      <option>Sim</option>
-      <option>Não</option>
-      <option>Não sei</option>
-    </select>
+    <div style="margin-top: 0.5rem; margin-bottom: 1rem;">
+      <input type="radio" name="usa_ia" value="Sim" required> Sim<br>
+      <input type="radio" name="usa_ia" value="Não"> Não<br>
+      <input type="radio" name="usa_ia" value="Não sei"> Não sei
+    </div>
     <label>Você sente necessidade de aprender mais sobre IA?</label>
-    <select name="aprender_ia" required>
-      <option value="">Selecione...</option>
-      <option>Sim</option>
-      <option>Não</option>
-    </select>
+    <div style="margin-top: 0.5rem; margin-bottom: 1rem;">
+      <input type="radio" name="usa_ia" value="Sim" required> Sim<br>
+      <input type="radio" name="usa_ia" value="Não"> Não
+    </div>
     <label>Comentário final:</label>
     <textarea name="comentario" rows="4" placeholder="Compartilhe sua opinião..."></textarea>
     <br>
@@ -279,6 +297,21 @@
   }
 
   mostrarPagina(paginaAtual);
+
+  // Exibir input se "Outro" for selecionado na formação acadêmica
+const formacaoSelect = document.getElementById("formacao");
+const formacaoOutroInput = document.getElementById("formacaoOutro");
+
+formacaoSelect.addEventListener("change", () => {
+  if (formacaoSelect.value === "Outro") {
+    formacaoOutroInput.style.display = "block";
+    formacaoOutroInput.required = true;
+  } else {
+    formacaoOutroInput.style.display = "none";
+    formacaoOutroInput.required = false;
+  }
+});
+
 </script>
 
 </body>
