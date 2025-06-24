@@ -129,19 +129,16 @@
     </select>
 
     <label>Formação acadêmica:</label>
-    <select name="formacao" id="formacao" required>
-      <option value="">Selecione...</option>
-      <option value="Pedagogia">Pedagogia</option>
-      <option value="Letras">Letras</option>
-      <option value="Matemática">Matemática</option>
-      <option value="Física">Física</option>
-      <option value="Química">Química</option>
-      <option value="História">História</option>
-      <option value="Geografia">Geografia</option>
-      <option value="Educação Física">Educação Física</option>
-      <option value="Informática">Informática</option>
-      <option value="Outro">Outro</option>
-    </select>
+     <label><input type="checkbox" name="formacao[]" value="Pedagogia"> Pedagogia</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Letras"> Letras</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Matemática"> Matemática</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Física"> Física</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Química"> Química</label><br>
+  <label><input type="checkbox" name="formacao[]" value="História"> História</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Geografia"> Geografia</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Educação Física"> Educação Física</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Informática"> Informática</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Outro"> Outro</label><br>
 
     <input type="text" name="formacao_outro" id="formacaoOutro" placeholder="Descreva sua formação..." style="display: none;" />
 
@@ -150,6 +147,7 @@
       <option value="">Selecione...</option>
       <option value="Programador">Programador(a)</option>
       <option value="Professor">Professor(a)</option>
+      <option value="Outra">Outra</option>
       <option value="Ambos">Ambos</option>
     </select>
 
