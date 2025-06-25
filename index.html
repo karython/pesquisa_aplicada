@@ -16,6 +16,17 @@
       max-width: 900px;
       margin: auto;
     }
+    .formacao-duas-colunas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .formacao-coluna {
+      flex: 1;
+      min-width: 200px;
+    }
+
 
     h1 {
       text-align: center;
@@ -128,29 +139,36 @@
       <option value="50+">50+</option>
     </select>
 
-<label>Formação acadêmica:</label><br>
+<label>Formação acadêmica:</label>
+<div class="formacao-duas-colunas">
+  <div class="formacao-coluna">
+    <label><input type="checkbox" name="formacao[]" value="Pedagogia"> Pedagogia</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Letras"> Letras</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Matemática"> Matemática</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Física"> Física</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Química"> Química</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Biologia"> Biologia</label><br>
+    <label><input type="checkbox" name="formacao[]" value="História"> História</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Geografia"> Geografia</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Educação Física"> Educação Física</label><br>
+  </div>
 
-  <label><input type="checkbox" name="formacao[]" value="Pedagogia"> Pedagogia</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Letras"> Letras</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Matemática"> Matemática</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Física"> Física</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Química"> Química</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Biologia"> Biologia</label><br>
-  <label><input type="checkbox" name="formacao[]" value="História"> História</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Geografia"> Geografia</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Educação Física"> Educação Física</label><br>
+  <div class="formacao-coluna">
+    <label><input type="checkbox" name="formacao[]" value="Informática"> Sistemas de Informação ou afins</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Engenharia"> Engenharia</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Direito"> Direito</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Administração"> Administração</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Psicologia"> Psicologia</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Economia"> Contábeis</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Enfermagem"> Enfermagem</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Medicina"> Medicina</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Arquitetura"> Arquitetura e Urbanismo</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Designer"> Design</label><br>
+    <label><input type="checkbox" name="formacao[]" value="Outro" id="checkboxOutro"> Outro</label><br>
+    <input type="text" name="formacao_outro" id="formacaoOutro" placeholder="Descreva sua formação..." style="display: none;" />
+  </div>
+</div>
 
-  <label><input type="checkbox" name="formacao[]" value="Informática"> Sistemas de Informação ou afins</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Engenharia"> Engenharia</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Direito"> Direito</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Administração"> Administração</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Psicologia"> Psicologia</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Economia"> Contabeis</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Enfermagem"> Enfermagem</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Medicina"> Medicina</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Arquitetura"> Arquitetura e Urbanismo</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Designer"> Design</label><br>
-  <label><input type="checkbox" name="formacao[]" value="Outro"> Outro</label><br>
 
 
     <input type="text" name="formacao_outro" id="formacaoOutro" placeholder="Descreva sua formação..." style="display: none;" />
