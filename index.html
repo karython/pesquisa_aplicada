@@ -130,17 +130,27 @@
 
 <label>Formação acadêmica:</label><br>
 
-<label><input type="checkbox" name="formacao[]" value="Pedagogia"> Pedagogia</label><br>
-<label><input type="checkbox" name="formacao[]" value="Letras"> Letras</label><br>
-<label><input type="checkbox" name="formacao[]" value="Matemática"> Matemática</label><br>
-<label><input type="checkbox" name="formacao[]" value="Física"> Física</label><br>
-<label><input type="checkbox" name="formacao[]" value="Química"> Química</label><br>
-<label><input type="checkbox" name="formacao[]" value="História"> História</label><br>
-<label><input type="checkbox" name="formacao[]" value="Geografia"> Geografia</label><br>
-<label><input type="checkbox" name="formacao[]" value="Educação Física"> Educação Física</label><br>
-<label><input type="checkbox" name="formacao[]" value="Informática"> Sistemas de Informação ou afins</label><br>
-<label><input type="checkbox" name="formacao[]" value="Designer"> Designer</label><br>
-<label><input type="checkbox" name="formacao[]" value="Outro"> Outro</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Pedagogia"> Pedagogia</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Letras"> Letras</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Matemática"> Matemática</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Física"> Física</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Química"> Química</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Biologia"> Biologia</label><br>
+  <label><input type="checkbox" name="formacao[]" value="História"> História</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Geografia"> Geografia</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Educação Física"> Educação Física</label><br>
+
+  <label><input type="checkbox" name="formacao[]" value="Informática"> Sistemas de Informação ou afins</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Engenharia"> Engenharia</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Direito"> Direito</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Administração"> Administração</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Psicologia"> Psicologia</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Economia"> Contabeis</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Enfermagem"> Enfermagem</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Medicina"> Medicina</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Arquitetura"> Arquitetura e Urbanismo</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Designer"> Design</label><br>
+  <label><input type="checkbox" name="formacao[]" value="Outro"> Outro</label><br>
 
 
     <input type="text" name="formacao_outro" id="formacaoOutro" placeholder="Descreva sua formação..." style="display: none;" />
@@ -363,11 +373,11 @@
   mostrarPagina(paginaAtual);
 
   // Exibir input se "Outro" for selecionado na formação acadêmica
-  const formacaoSelect = document.getElementById("formacao");
+  const checkboxOutro = document.getElementById("checkboxOutro");
   const formacaoOutroInput = document.getElementById("formacaoOutro");
 
-  formacaoSelect.addEventListener("change", () => {
-    if (formacaoSelect.value === "Outro") {
+  checkboxOutro.addEventListener("change", () => {
+    if (checkboxOutro.checked) {
       formacaoOutroInput.style.display = "block";
       formacaoOutroInput.required = true;
     } else {
